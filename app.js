@@ -23,7 +23,7 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-dotenv.load({ path: '.env.example' });
+//dotenv.load({ path: '.env.example' });
 
 /**
  * Controllers (route handlers).
@@ -72,6 +72,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
 } 
  
 console.log(mongoURL);
+console.log(process.env);
 mongoose.connect(mongoURL);
 mongoose.connection.on('connected', () => {
   console.log('%s MongoDB connection established!', chalk.green('✓'));
