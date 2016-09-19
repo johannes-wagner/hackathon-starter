@@ -46,7 +46,7 @@ const app = express();
 /**
  * Connect to MongoDB.
  */
-const mongoURL = "mongodb://" +process.env.MONGODB_USER +":"+ process.env.MONGODB_PASSWORD +"@localhost:27017/"+ MONGODB_DATABASE
+const mongoURL = "mongodb://" +process.env.MONGODB_USER +":"+ process.env.MONGODB_PASSWORD +"@localhost:27017/"+ process.env.MONGODB_DATABASE
 //mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
 mongoose.connect(mongoURL);
 mongoose.connection.on('connected', () => {
