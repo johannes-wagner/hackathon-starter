@@ -71,7 +71,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
   }
 } 
  
-console.log(mongoUrl);
+console.log(mongoURL);
 mongoose.connect(mongoURL);
 mongoose.connection.on('connected', () => {
   console.log('%s MongoDB connection established!', chalk.green('✓'));
